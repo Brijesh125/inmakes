@@ -1,13 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
+from .models import Place
+from .models import Team
+
+
 def demo(request):
-
-    return render(request,"index.html")
-
-# def addition(request):
-#     x=int(request.GET['num1'])
-#     y=int(request.GET['num2'])
-#     res=x+y
-#     return render(request,"result.html",{'result':res})
+    obj=Place.objects.all()
+    kkp=Team.objects.all()
+    return render(request, "index.html",{'result':obj,'kkpp':kkp})
 
