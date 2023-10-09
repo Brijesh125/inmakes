@@ -6,7 +6,7 @@ This is the cart page. proceed to review your items and place order
 {% endblock %}
 
 {% block title %}
-    Cart - @ Zudio pvt Ltd
+    Cart - @ BIKER'S HUB pvt Ltd
 {% endblock %}
 {% block content %}
 {% if not cart_items %}
@@ -14,12 +14,12 @@ This is the cart page. proceed to review your items and place order
 <div>
     <div class="text-center">
         <br>
-        <h1 class="text-center my_title">
+        <h1 style="color:white" class="text-center my_title">
             Your Shopping Cart is Empty
         </h1>
         <br>
-        <p class="text-center">
-            please click<a href="{% url 'shop:allProdCat' %}"></a>To continue shopping.
+        <p style="color:white" class="text-center">
+            please click<a href="{% url 'shop:allProdCat' %}"></a> To continue shopping.
         </p>
     </div>
 </div>
@@ -27,7 +27,7 @@ This is the cart page. proceed to review your items and place order
 <div>
     <div class="text-center">
         <br>
-        <h1 class="text-center my_title">
+        <h1 style="color:white" class="text-center my_title">
             Your Shopping Cart
         </h1>
         <br>
@@ -50,7 +50,7 @@ This is the cart page. proceed to review your items and place order
                         <td>
                             <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}"  alt=""   class="float-left rounded custom_image " style="height:100px; width:100px;"> </a>
                         </td>
-                        <td class="text-lef">
+                        <td style="color:white" class="text-lef">
                             {{cart_item.product.name}}
                             <br>
                             SKU: {{cart_item.product.id}}
@@ -84,10 +84,10 @@ This is the cart page. proceed to review your items and place order
       </div>
     <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
         <table class="table my_custom_table">
-            <thead class="my_custom_head">
+            <thead style="color:white" class="my_custom_head">
             <tr>
                 <th>
-                    Checkout
+                     Checkout
                 </th>
             </tr>
             </thead>
@@ -98,7 +98,7 @@ This is the cart page. proceed to review your items and place order
                 </td>
             </tr>
             <tr>
-                <td class="text-left">
+                <td style="color:white" class="text-left">
                     Your Total is : <strong>{{ total }}</strong>
 
                 </td>

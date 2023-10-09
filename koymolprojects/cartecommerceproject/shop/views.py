@@ -8,7 +8,6 @@ from .models import Category
 
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
 
-
 def allProdCat(request,c_slug=None):
     c_page=None
     products_list=None
