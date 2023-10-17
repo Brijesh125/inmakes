@@ -19,7 +19,7 @@ from django.urls import path,include
 from rest_framework import routers
 
 from django.conf import settings
-from restapp.views import TaskViewset
+from restapp.views import TaskViewset,Createuserview
 from restapp import views
 from django.conf.urls.static import static
 router=routers.SimpleRouter()
@@ -29,5 +29,7 @@ router.register('due_task',views.DueTaskViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register/',views.Createuserview.as_view(),name='user'),
+    path('api_auth/',include('rest_framework.urls')),
     path('',include(router.urls)),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
