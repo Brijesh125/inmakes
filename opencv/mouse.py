@@ -1,8 +1,8 @@
 import cv2
 
 def draw_circle(event,x,y,flag,param):
-    if event==cv2.EVENT_MBUTTONDBLCLK:
-        cv2.circle(image, (200, 200), 100, (0, 0, 255), -1)
+    if event==cv2.EVENT_LBUTTONDBLCLK:
+        cv2.circle(image, (x,y), 100, (255, 0, 0), -1)
 
 image=cv2.imread("phantom.png",1)
 cv2.namedWindow("image")
